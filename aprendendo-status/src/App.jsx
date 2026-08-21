@@ -1,8 +1,8 @@
 import './App.css'
-import Apre from './components/Apre'
+// import Apre from './components/Apre'
 import Produtos from './components/Produtos'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Botao from './components/Botao';
+// import Botao from './components/Botao';
 import Cardproduto from './components/Cardproduto';
 import { useState } from 'react';
 
@@ -46,6 +46,7 @@ function App() {
                 <input className="addqtd" type="number" name="" id="" />
                 <button>Add &#128640;</button>
               </form>
+              <Cardproduto nome={"Café Orgânico"} qtd={2}/>
             </div>
           )
       }

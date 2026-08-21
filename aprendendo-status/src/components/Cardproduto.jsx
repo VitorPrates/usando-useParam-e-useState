@@ -3,7 +3,7 @@ import "./CSSassets/cardproduto.css"
 
 
 
-export default function Cardproduto({nome,qtd})
+export default function Cardproduto({nome,qtd, fechavel})
 {
     const [clicado, setClicado] = useState(false)
 
@@ -19,6 +19,7 @@ export default function Cardproduto({nome,qtd})
                 
                 <p>{clicado? <span>&gt;</span> : ""}{nome}</p>
                 <span>Qtd: {qtd}</span>
+                {fechavel ? <p>{fechavel}</p>:""}
             </div>
         </>
     )
