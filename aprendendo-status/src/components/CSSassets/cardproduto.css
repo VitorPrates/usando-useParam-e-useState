@@ -1,0 +1,17 @@
+.cardproduto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px 0px;
+  box-shadow: -7px 0px 0 0 blue;
+  cursor: pointer;
+  color: black;
+}
+.cardproduto span {
+  background-color: #cccccc;
+  border-radius: 10px;
+  padding: 5px;
+}/*# sourceMappingURL=cardproduto.css.map */
