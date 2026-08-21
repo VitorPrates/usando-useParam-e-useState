@@ -44,4 +44,31 @@ body{
       border-radius: 5px;
     }
   }
+  .adicionando_produtos
+  {
+    width: 100%;
+    form
+    {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      padding: 10px;
+      .addname,.addqtd
+      {
+        padding: 10px 5px;
+      }
+      .addname
+      {
+        width: 65%;
+      }
+      .addqtd
+      {
+        width: 20%;
+      }
+      button
+      {
+        width: 15%;
+      }
+    }
+  }
 }

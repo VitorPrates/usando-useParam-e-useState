@@ -40,8 +40,12 @@ function App() {
           )
         case 1:
           return(
-            <div>
-              <h1>heio</h1>
+            <div className='adicionando_produtos'>
+              <form action="">
+                <input className="addname" type="text" />
+                <input className="addqtd" type="number" name="" id="" />
+                <button>Add &#128640;</button>
+              </form>
             </div>
           )
       }
