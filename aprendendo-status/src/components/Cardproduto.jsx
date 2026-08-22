@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { use, useState } from "react"
 import "./CSSassets/cardproduto.css"
 
 
@@ -6,6 +6,7 @@ import "./CSSassets/cardproduto.css"
 export default function Cardproduto({nome,qtd, fechavel})
 {
     const [clicado, setClicado] = useState(false)
+    const[fechado,setFechado] = useState(false)
 
     function altetarClick()
     {

@@ -6,11 +6,12 @@ import { useState } from "react";
 export default function Carrinho()
 {
     const [produtos_selecionado, setProdutosSelecionado] = useState([
-        { nome: "nome", qtd: 1 },
-        { nome: "nome2", qtd: 2 },
+        { nome: "Teste", qtd: 1 },
     ]);
+
     const [nomeInput, setNomeInput] = useState("");
     const [qtdInput, setQtdInput] = useState(1);
+
     function adicionar_item(nome_produto, quantidade) {
         // Verifica se o produto já existe na lista atual
         const produto_existente = produtos_selecionado.find(item => item.nome === nome_produto);
@@ -43,10 +44,16 @@ export default function Carrinho()
         setQtdInput(1);
     }
 
+    function remover_item(nome_produto) {
+        // Cria uma nova lista contendo apenas os produtos que NÃO têm o nome selecionado
+        const lista_filtrada = produtos_selecionado.filter(item => item.nome !== nome_produto);
+        // Atualiza o estado do React com a nova lista (o item some da tela)
+        setProdutosSelecionado(lista_filtrada);
+    }
+
     return(
         <div className='adicionando_produtos'>
             <form onSubmit={manipularEnvio}>
-                {/* Conectamos o valor do input ao estado 'nomeInput' */}
                 <input 
                     className="addname" 
                     type="text" 
@@ -54,7 +61,6 @@ export default function Carrinho()
                     value={nomeInput}
                     onChange={(e) => setNomeInput(e.target.value)}
                 />
-                {/* Conectamos o valor do input ao estado 'qtdInput' */}
                 <input 
                     className="addqtd" 
                     type="number" 
@@ -64,7 +70,12 @@ export default function Carrinho()
                 />
                 <button type="submit">Add 🚀</button>
             </form>
-            {produtos_selecionado.map((item) => (<Cardproduto nome={item.nome} qtd={item.qtd} fechavel={"x"}/>))}            
+            {produtos_selecionado.map((item) => (
+                <div className="card_produto">
+                    <Cardproduto nome={item.nome} qtd={item.qtd}></Cardproduto>
+                    <p  onClick={() => remover_item(item.nome)}>❌</p>
+                </div>
+                ))}            
         </div>
     )
 }

@@ -9,19 +9,37 @@
         padding: 10px;
         .addname,.addqtd
         {
-        padding: 10px 5px;
+            padding: 10px 5px;
         }
         .addname
         {
-        width: 65%;
+            width: 65%;
         }
         .addqtd
         {
-        width: 20%;
+            width: 20%;
         }
         button
         {
-        width: 15%;
+            width: 15%;
+            background-color: rgb(24, 24, 238);
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 1px solid black;
+            outline: none;
+        }
+    }
+    .card_produto
+    {
+        display: grid;
+        grid-template-columns: 90% 10%;
+        justify-content: center;
+        align-items: center;
+        p
+        {
+            text-align: center;
+            cursor: pointer;
         }
     }
 }
