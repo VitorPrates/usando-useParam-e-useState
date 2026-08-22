@@ -57,7 +57,7 @@ export default function Carrinho()
                 <input 
                     className="addname" 
                     type="text" 
-                    placeholder="Nome do produto"
+                    placeholder="Produto..."
                     value={nomeInput}
                     onChange={(e) => setNomeInput(e.target.value)}
                 />

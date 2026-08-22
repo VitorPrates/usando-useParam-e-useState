@@ -15,6 +15,7 @@
 }
 .adicionando_produtos form .addqtd {
   width: 20%;
+  text-align: center;
 }
 .adicionando_produtos form button {
   width: 15%;
