@@ -1,0 +1,21 @@
+.adicionando_produtos {
+  width: 100%;
+}
+.adicionando_produtos form {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 10px;
+}
+.adicionando_produtos form .addname, .adicionando_produtos form .addqtd {
+  padding: 10px 5px;
+}
+.adicionando_produtos form .addname {
+  width: 65%;
+}
+.adicionando_produtos form .addqtd {
+  width: 20%;
+}
+.adicionando_produtos form button {
+  width: 15%;
+}/*# sourceMappingURL=Carrinho.css.map */

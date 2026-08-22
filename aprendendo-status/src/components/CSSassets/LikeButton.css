@@ -1,0 +1,39 @@
+.curtindo-fotos {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.curtindo-fotos .foto_perfil {
+  width: 80%;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.curtindo-fotos .foto_perfil img {
+  width: 60%;
+}
+.curtindo-fotos .btn_like {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  font-size: 1em;
+}
+.curtindo-fotos .btn_like[data="<3"] {
+  animation: liked 3s infinite;
+}
+
+@keyframes liked {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=LikeButton.css.map */

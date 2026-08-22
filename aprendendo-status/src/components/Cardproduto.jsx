@@ -17,9 +17,9 @@ export default function Cardproduto({nome,qtd, fechavel})
             onClick={altetarClick}
             className='cardproduto'>
                 
-                <p>{clicado? <span>&gt;</span> : ""}{nome}</p>
+                <p>{clicado? fechavel ? <span>{fechavel}</span>:"" : ""}{nome}</p>
                 <span>Qtd: {qtd}</span>
-                {fechavel ? <p>{fechavel}</p>:""}
+                
             </div>
         </>
     )

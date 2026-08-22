@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import Botao from './components/Botao';
 import Cardproduto from './components/Cardproduto';
 import { useState } from 'react';
+import LikeButton from './components/LikeButton';
+import Carrinho from './components/Carrinho';
 
 function App() {
   const [tela, setTela] = useState(0)
@@ -19,6 +21,9 @@ function App() {
         <button
         onClick={() => setTela(1)}
         >tela 2</button>
+        <button
+        onClick={() => setTela(2)}
+        >Atividade Like</button>
       </header>
       <h2>🛒Lista de compras</h2>
 
@@ -40,13 +45,14 @@ function App() {
           )
         case 1:
           return(
-            <div className='adicionando_produtos'>
-              <form action="">
-                <input className="addname" type="text" />
-                <input className="addqtd" type="number" name="" id="" />
-                <button>Add &#128640;</button>
-              </form>
-              <Cardproduto nome={"Café Orgânico"} qtd={2}/>
+            <Carrinho/>
+          )
+        case 2:
+          return(
+            <div className='atividade_like'>
+              <h1>Atividade Like</h1>
+              <LikeButton/>
+              
             </div>
           )
       }
